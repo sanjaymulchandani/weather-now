@@ -23,9 +23,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-n7i%h%3a+=0**_u#t)b9*zj5360f#de%oq&qw$7c89!2*(9hvg'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
-ALLOWED_HOSTS = ['127.0.0.1', 'bluskyweatherapp.herokuapp.com']
+ALLOWED_HOSTS = []
 
 
 # Application definition
@@ -120,15 +120,6 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.2/howto/static-files/
 
 STATIC_URL = '/static/'
-if DEBUG:
-   STATICFILES_DIRS = [
-   os.path.join(BASE_DIR, 'static'),
-   ]
-else:
-   STATIC_ROOT = os.path.join(BASE_DIR,'static')
-
-MEDIA_URL = '/media/'
-MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
